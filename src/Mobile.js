@@ -3,6 +3,6 @@ import ReactDOM from "react-dom"
 import App from "./components/App/App"
 
 ReactDOM.render(
-  <App />,
+  <App isMobile />,
   document.getElementById("root")
 )

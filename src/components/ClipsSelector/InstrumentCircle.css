@@ -1,0 +1,187 @@
+.instrument-container{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0ac121;
+    position: relative;
+    margin: 10px;
+}
+
+.instrument-container h1{
+    position: absolute;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    z-index: 30;
+    font-size: 16px;
+    color: #333 !important;
+
+}
+
+.instrument-container.polling{
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+.instrument-knob{
+    width: 60%;
+    height: 60%;
+    transition: 3s;
+    z-index: 20;
+    background-color: yellow;
+    box-shadow: 0px 0px 20px 6px #00000061;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.instrument-knob-arrow{
+    border-bottom: 12px solid yellow;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    margin-top: -9px;
+}
+
+.instrument-image{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    border-radius: 100%;
+    z-index: 100;
+    object-fit: cover;
+}
+
+.instrument-image-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list{
+	background-color: #0ac121;
+    height: 100%;
+    width: 100%;
+	border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item{
+	list-style: none;
+    background-color: black;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    top: calc(50% - 5%);
+    left: calc(50% - 5%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.05s;
+}
+
+.clip-vote-circle{
+	list-style: none;
+    background-color: rgb(49,89,234);
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.05s;
+}
+
+
+
+
+.list-item.mute img{
+    position: absolute;
+    background-color:  #0ac121;
+    top: 0;
+    left: 0;
+    border-radius: 100%
+}
+
+
+.list-item.mute.chosen img{
+    position: absolute;
+}
+
+.list-item.mute{
+    background-color: transparent;
+}
+
+
+
+.clip-vote-circle.chosen{
+    background-color: rgb(49,89,234);
+    border: 2px dashed black;
+}
+
+
+
+.clip-circle{
+    width: 50%;
+    height: 50%;
+    border: unset;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+
+.clip-circle.chosen{
+    opacity: 1;
+}
+
+
+
+.list-item:hover{
+    width: 2.5em;
+    height: 2.5em;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+    cursor: pointer;
+}
+
+
+/* @media screen and (max-width: 768px){ */
+    .mobile * .instrument-container{
+        margin: 20px;
+        width: 130px;
+        height: 130px;
+    }
+
+
+    .mobile * .instrument-knob-arrow{
+        border-bottom: 10px solid yellow;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        margin-top: -7px;
+    }
+
+    .mobile * .instrument-container h1{
+        font-size: 13px;
+    }
+/* } */
